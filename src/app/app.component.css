@@ -1,0 +1,10 @@
+.container {
+  display: grid;
+  place-items: center;
+}
+
+.edit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
