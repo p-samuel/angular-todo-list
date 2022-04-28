@@ -1,0 +1,23 @@
+.card {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 30px;
+	border-radius: 5px;
+}
+
+.description {
+	margin-right: auto;
+}
+
+.priority {
+	background-color: hsl(306, 86%, 58%);
+	color: hsl(56, 90%, 50%);
+	font-size: larger;
+	width: 15%;
+	height: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+}

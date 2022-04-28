@@ -1,1 +1,7 @@
-<p>cards-list works!</p>
+<div class="row">
+	<app-card-item
+		*ngFor="let card of cards; let i = index"
+		[card]="card"
+		[index]="i"
+	></app-card-item>
+</div>
