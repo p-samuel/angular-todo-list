@@ -8,11 +8,7 @@ import { Card } from './card-item/card.model';
 })
 export class CardsListComponent {
 
-  cards: Card[] = [
-    new Card('Clean my bedbroom', 20),
-    new Card('Make my lunch', 4),
-    new Card('Cook noodles for lunch', 14)
-  ]
+  cards: Card[] = []
 
   constructor() { }
 }
