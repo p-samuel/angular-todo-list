@@ -1,7 +1,7 @@
 input {
   border-radius: 5px;
   font-weight: 600;
-  width: 300px;
+  width: 40vw;
   height: 40px;
   font-size: 16px;
   font-family: 'Roboto';
@@ -35,4 +35,5 @@ input {
   font-size: larger;
   margin: 0px auto auto 20px;
   width: 10%;
+  text-align: center;
 }

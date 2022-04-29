@@ -10,6 +10,18 @@ const initialState: State = {
     new Card('Clean my bedbroom', 20),
     new Card('Make my lunch', 4),
     new Card('Cook noodles for lunch', 14),
+		new Card('Clean my bedbroom', 20),
+    new Card('Make my lunch', 4),
+    new Card('Cook noodles for lunch', 14),    
+		new Card('Clean my bedbroom', 20),
+    new Card('Make my lunch', 4),
+    new Card('Cook noodles for lunch', 14),    
+		new Card('Clean my bedbroom', 20),
+    new Card('Make my lunch', 4),
+    new Card('Cook noodles for lunch', 14),    
+		new Card('Clean my bedbroom', 20),
+    new Card('Make my lunch', 4),
+    new Card('Cook noodles for lunch', 14),
 		new Card('Study Artificial Inteligence', 12)	
 	]
 }
