@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Card } from './card.model';
+import { faDeleteLeft } from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'app-card-item',
@@ -9,7 +10,8 @@ import { Card } from './card.model';
 export class CardItemComponent implements OnInit {
   @Input() card: Card | undefined;
   @Input() index: number = 0;
-
+  faDelete = faDeleteLeft;
+  
   constructor() { }
 
   ngOnInit(): void {

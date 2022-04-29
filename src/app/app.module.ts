@@ -7,6 +7,7 @@ import { ButtonComponent } from './button/button.component';
 import { CardsComponent } from './cards/cards.component';
 import { CardsListComponent } from './cards/cards-list/cards-list.component';
 import { CardItemComponent } from './cards/cards-list/card-item/card-item.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CardItemComponent } from './cards/cards-list/card-item/card-item.compon
   imports: [
     CommonModule,
     BrowserModule, 
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
