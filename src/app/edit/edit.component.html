@@ -1,1 +1,11 @@
-<input type="text">
+<div>
+    <div class="edit">
+        <input type="text">
+        <app-button text="ADD"></app-button>
+    </div>
+    <a>Set up priority level</a>
+    <div class="slider-box">
+        <p-slider class="slider" [(ngModel)]="priority" #formControlName="ngModel" [min]="0" [max]="10" [step]="1"></p-slider>
+        <input class="slider-value" type="text" readonly [(ngModel)]="priority" />
+    </div>
+</div>

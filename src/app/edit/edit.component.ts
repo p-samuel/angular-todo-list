@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent  {
-
+  priority = 10;
   constructor() { }
 
 }

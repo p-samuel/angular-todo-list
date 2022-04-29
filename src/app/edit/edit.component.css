@@ -10,3 +10,29 @@ input {
   margin-bottom: 25px;
   border-width: 0px;
 }
+
+.edit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.slider-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.slider {
+  flex: 1;
+  align-items: center;
+}
+
+.slider-value {
+  background-color: inherit;
+  border-width: 0px;
+  color: white;
+  font-size: larger;
+  margin: 0px auto auto 20px;
+  width: 10%;
+}

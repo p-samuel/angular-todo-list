@@ -10,6 +10,8 @@ import { CardItemComponent } from './cards/cards-list/card-item/card-item.compon
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { StoreModule } from '@ngrx/store';
 import { AppReducer } from './store/app.reducer';
+import { SliderModule } from 'primeng/slider';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,8 +23,10 @@ import { AppReducer } from './store/app.reducer';
     CardItemComponent,
   ],
   imports: [
+    SliderModule,
     CommonModule,
     BrowserModule, 
+    FormsModule,
     FontAwesomeModule,
     StoreModule.forRoot(AppReducer)
   ],
