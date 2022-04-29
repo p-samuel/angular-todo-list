@@ -1,6 +1,6 @@
 import { Store } from '@ngrx/store';
 import { map, Subscription } from 'rxjs';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Card } from './card-item/card.model';
 import * as AppReducer from '../../store/app.reducer';
 
@@ -9,7 +9,7 @@ import * as AppReducer from '../../store/app.reducer';
   templateUrl: './cards-list.component.html',
   styleUrls: ['./cards-list.component.css']
 })
-export class CardsListComponent implements OnInit{
+export class CardsListComponent implements OnInit, OnDestroy{
 
   cards: Card[] = [];
   subscription: Subscription;
@@ -22,5 +22,9 @@ export class CardsListComponent implements OnInit{
     .subscribe((cards: Card[]) => {
       this.cards = cards;
     })
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe()
   }
 }
