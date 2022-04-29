@@ -13,7 +13,7 @@ const initialState: State = {
 	]
 }
 
-export function cardReducer(state: State = initialState, action: Actions.CardActions){
+export function cardReducer(state: State = initialState, action: Actions.CardActions): State {
 	switch (action.type) {
 		case Actions.ADD_TODO:
 			return {
@@ -27,5 +27,7 @@ export function cardReducer(state: State = initialState, action: Actions.CardAct
 					return action.payload !== index;
 				})
 			}
+		default:
+			return state;
 	}
 }

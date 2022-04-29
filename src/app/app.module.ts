@@ -8,6 +8,8 @@ import { CardsComponent } from './cards/cards.component';
 import { CardsListComponent } from './cards/cards-list/cards-list.component';
 import { CardItemComponent } from './cards/cards-list/card-item/card-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { StoreModule } from '@ngrx/store';
+import { AppReducer } from './store/app.reducer';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     CommonModule,
     BrowserModule, 
     FontAwesomeModule,
+    StoreModule.forRoot(AppReducer)
   ],
   providers: [],
   bootstrap: [AppComponent]
