@@ -1,9 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { Card } from '../cards/cards-list/card-item/card.model';
 import * as State from '../store/app.reducer';
 import * as CardActions from '../cards/store/cards.actions';
-import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-edit',
