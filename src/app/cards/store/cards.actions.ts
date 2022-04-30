@@ -9,9 +9,12 @@ export type CardActions =
     | SetEditMode
     | DecrementPriority
     | SaveTodos
-    | LoadTodos;
+    | LoadTodos
+    | AddTodos;
+
 
 export const ADD_TODO = 'ADD_TODO';
+export const ADD_TODOS = 'ADD_TODOS';
 export const DELETE_TODO = 'DELETE_TODO';
 export const SET_EDIT_MODE = 'SET_EDIT_MODE';
 export const INCREMENT_PRIORITY = 'INCREMENT_PRIORITY';
@@ -49,4 +52,9 @@ export class SaveTodos implements Action {
 
 export class LoadTodos implements Action {
     readonly type = LOAD_TODOS;
+}
+
+export class AddTodos implements Action {
+    readonly type = ADD_TODOS;
+    constructor (public payload: Card[]){}
 }

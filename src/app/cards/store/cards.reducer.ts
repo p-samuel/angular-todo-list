@@ -51,6 +51,11 @@ export function cardReducer(state: State = initialState, action: Actions.CardAct
 				: card
 				)
 			}
+		case Actions.ADD_TODOS:
+			return {
+				...state,
+				cards: action.payload 
+			}
 		default:
 			return state;
 	}
