@@ -17,4 +17,8 @@ export class CardItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  click(){
+    alert(`This is my id ${this.index}`)
+  }
+
 }

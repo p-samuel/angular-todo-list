@@ -12,6 +12,7 @@ button {
 }
 
 button:hover {
+  cursor: pointer;
   background-color: hsl(306, 86%, 40%);  
   transition: 300ms all ease-out;
 }

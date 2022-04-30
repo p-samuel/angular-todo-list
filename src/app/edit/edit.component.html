@@ -1,12 +1,21 @@
 <div>
-    <h1>Include your todo's here</h1>
-    <div class="edit">
-        <input type="text">
-        <app-button text="ADD"></app-button>
-    </div>
-    <a>Set up priority level</a>
-    <div class="slider-box">
-        <p-slider class="slider" [(ngModel)]="priority" #formControlName="ngModel" [min]="0" [max]="10" [step]="1"></p-slider>
-        <input class="slider-value" type="text" readonly [(ngModel)]="priority" />
-    </div>
+	<h1>Include your todo's here</h1>
+	<form (ngSubmit)="click(cardForm)" #cardForm="ngForm">
+		<div class="edit">
+			<input 
+				type="text" 
+				id="text"
+				class="form-control"
+				#nameInput name="text"
+				required
+				[(ngModel)]="text"
+			>
+			<app-button text="ADD" type="submit"></app-button>
+		</div>
+	</form>
+	<a>Set up priority level</a>
+	<div class="slider-box">
+		<p-slider class="slider" [(ngModel)]="priority" #formControlName="ngModel" [min]="0" [max]="10" [step]="1"></p-slider>
+		<input class="slider-value" type="text" readonly [(ngModel)]="priority" />
+	</div>
 </div>
