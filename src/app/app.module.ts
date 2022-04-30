@@ -13,6 +13,8 @@ import { StoreModule } from '@ngrx/store';
 import { AppReducer } from './store/app.reducer';
 import { SliderModule } from 'primeng/slider';
 import { FormsModule } from '@angular/forms';
+import { EffectsModule } from '@ngrx/effects';
+import { CardEffects } from './cards/store/cards.effects';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { FormsModule } from '@angular/forms';
     FontAwesomeModule,
     StoreModule.forRoot(AppReducer),
     BrowserAnimationsModule,
+    EffectsModule.forRoot([CardEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]
