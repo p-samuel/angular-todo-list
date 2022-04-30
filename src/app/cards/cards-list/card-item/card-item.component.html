@@ -2,8 +2,11 @@
   <div class="description">
     <h3>{{ card?.description }}</h3>
   </div>
-  <div class="priority">
+  <div class="priority"
+    (click)="increment()"
+    (contextmenu)="decrement($event)"
+  >
     <p>{{ card?.priority }}</p>	
   </div>
-  <a (click)="click()"><fa-icon [icon]="faDelete" size="2x"></fa-icon></a>
+  <a (click)="delete()"><fa-icon [icon]="faDelete" size="2x"></fa-icon></a>
 </div>

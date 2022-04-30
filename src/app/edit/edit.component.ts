@@ -19,10 +19,12 @@ export class EditComponent {
   constructor(private store: Store<State.AppState>) { }
 
   click(form: NgForm) {
-    const cardForm = form.value;
-    const card = new Card(cardForm.text, this.priority);
-    this.store.dispatch(new CardActions.AddTodo(card))
-    this.cardForm.reset()
+    if (form.valid) {
+      const cardForm = form.value;
+      const card = new Card(cardForm.text, this.priority);
+      this.store.dispatch(new CardActions.AddTodo(card))
+      this.cardForm.reset()
+    }
   }
 
 }

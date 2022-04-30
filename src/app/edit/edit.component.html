@@ -9,13 +9,14 @@
 				#nameInput name="text"
 				required
 				[(ngModel)]="text"
+				pattern="(.|\s)*\S(.|\s)*"
 			>
 			<app-button text="ADD" type="submit"></app-button>
 		</div>
 	</form>
 	<a>Set up priority level</a>
 	<div class="slider-box">
-		<p-slider class="slider" [(ngModel)]="priority" #formControlName="ngModel" [min]="0" [max]="10" [step]="1"></p-slider>
+		<p-slider class="slider" [(ngModel)]="priority" #formControlName="ngModel" [min]="0" [max]="10"></p-slider>
 		<input class="slider-value" type="text" readonly [(ngModel)]="priority" />
 	</div>
 </div>
