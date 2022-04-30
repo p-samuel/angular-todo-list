@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { EditComponent } from './edit/edit.component';
 import { ButtonComponent } from './button/button.component';
@@ -28,7 +29,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule, 
     FormsModule,
     FontAwesomeModule,
-    StoreModule.forRoot(AppReducer)
+    StoreModule.forRoot(AppReducer),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

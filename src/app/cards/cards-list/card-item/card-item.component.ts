@@ -4,11 +4,13 @@ import { faDeleteLeft } from '@fortawesome/free-solid-svg-icons'
 import { Card } from './card.model';
 import * as AppReducer from '../../../store/app.reducer';
 import * as CardActions from '../../store/cards.actions';
+import { itemInOut } from './card-item.animations';
 
 @Component({
   selector: 'app-card-item',
   templateUrl: './card-item.component.html',
-  styleUrls: ['./card-item.component.css']
+  styleUrls: ['./card-item.component.css'],
+  animations: [ itemInOut ]
 })
 export class CardItemComponent implements OnInit {
   @Input() card: Card | undefined;
