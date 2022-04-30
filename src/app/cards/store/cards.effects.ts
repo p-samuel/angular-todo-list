@@ -9,15 +9,9 @@ export class CardEffects {
 
   saveTodos = createEffect(() => {
     return this.actions.pipe(
-      ofType(CardActions.ADD_TODO),
-      tap((cardAddAction: CardActions.AddTodo) => {
-        const todos: ITodoList = JSON.parse(localStorage.getItem('todos') || '{}');       
-        if (!todos.items) {
-          todos.items = new Array(1);
-        }
-        const todo: ITodo = { ...cardAddAction.payload }
-        todos.items.push(todo);
-        localStorage.setItem('todos', JSON.stringify(todos))
+      ofType(CardActions.SAVE_TODOS),
+      tap((cardAddAction: CardActions.SaveTodos) => {
+        localStorage.setItem('todos', JSON.stringify(cardAddAction.payload))
       })
     )
   }, { dispatch: false })

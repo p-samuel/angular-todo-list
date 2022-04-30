@@ -3,6 +3,7 @@ import { map, Subscription } from 'rxjs';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Card } from './card-item/card.model';
 import * as AppReducer from '../../store/app.reducer';
+import * as CardActions from '../store/cards.actions';
 
 @Component({
   selector: 'app-cards-list',
@@ -21,6 +22,7 @@ export class CardsListComponent implements OnInit, OnDestroy{
     .pipe(map(cardsState =>  cardsState.cards))
     .subscribe((cards: Card[]) => {
       this.cards = cards;
+      this.store.dispatch(new CardActions.SaveTodos(this.cards))
     })
   }
 
